@@ -74,7 +74,7 @@ mod any;
 mod duration;
 pub use duration::DurationError;
 
-mod timestamp;
+pub mod timestamp;
 pub use timestamp::TimestampError;
 
 mod type_url;
