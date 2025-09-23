@@ -33,8 +33,6 @@ mod bootstrap;
 #[cfg(test)]
 mod debug;
 #[cfg(test)]
-mod deprecated_field;
-#[cfg(test)]
 mod derive_copy;
 #[cfg(test)]
 mod enum_keyword_variant;
@@ -97,9 +95,8 @@ mod test_result_named_option_value {
     include!(concat!(env!("OUT_DIR"), "/mystruct.optionn.rs"));
 }
 
-mod test_result_named_result_value {
-    include!(concat!(env!("OUT_DIR"), "/mystruct.result.rs"));
-}
+#[cfg(test)]
+mod result_struct;
 
 /// Also for testing custom attributes, but on oneofs.
 ///
@@ -110,11 +107,8 @@ pub mod oneof_attributes {
     include!(concat!(env!("OUT_DIR"), "/foo.custom.one_of_attrs.rs"));
 }
 
-pub mod proto3 {
-    pub mod presence {
-        include!(concat!(env!("OUT_DIR"), "/proto3.presence.rs"));
-    }
-}
+#[cfg(test)]
+mod proto3_presence;
 
 use core::fmt::Debug;
 
@@ -316,16 +310,6 @@ mod tests {
         // https://github.com/tokio-rs/prost/issues/267
         let buf = vec![b'C'; 1 << 20];
         <() as Message>::decode(&buf[..]).err().unwrap();
-    }
-
-    #[test]
-    fn test_proto3_presence() {
-        let msg = proto3::presence::A {
-            b: Some(42),
-            foo: Some(proto3::presence::a::Foo::C(13)),
-        };
-
-        check_message(&msg);
     }
 
     #[test]
