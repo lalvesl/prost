@@ -5,7 +5,7 @@
 [![Dependency Status](https://deps.rs/repo/github/tokio-rs/prost/status.svg)](https://deps.rs/repo/github/tokio-rs/prost)
 [![Discord](https://img.shields.io/discord/500028886025895936)](https://discord.gg/tokio)
 
-# *PROST!*
+# _PROST!_
 
 `prost` is a [Protocol Buffers](https://protobuf.dev/)
 implementation for the [Rust Language](https://www.rust-lang.org/). `prost`
@@ -13,17 +13,17 @@ generates simple, idiomatic Rust code from `proto2` and `proto3` files.
 
 Compared to other Protocol Buffers implementations, `prost`
 
-* Generates simple, idiomatic, and readable Rust types by taking advantage of
+- Generates simple, idiomatic, and readable Rust types by taking advantage of
   Rust `derive` attributes.
-* Retains comments from `.proto` files in generated Rust code.
-* Allows existing Rust types (not generated from a `.proto`) to be serialized
+- Retains comments from `.proto` files in generated Rust code.
+- Allows existing Rust types (not generated from a `.proto`) to be serialized
   and deserialized by adding attributes.
-* Uses the [`bytes::{Buf, BufMut}`](https://github.com/tokio-rs/bytes)
+- Uses the [`bytes::{Buf, BufMut}`](https://github.com/tokio-rs/bytes)
   abstractions for serialization instead of `std::io::{Read, Write}`.
-* Respects the Protobuf `package` specifier when organizing generated code
+- Respects the Protobuf `package` specifier when organizing generated code
   into Rust modules.
-* Preserves unknown enum values during deserialization.
-* Does not include support for runtime reflection or message descriptors.
+- Preserves unknown enum values during deserialization.
+- Does not include support for runtime reflection or message descriptors.
 
 ## Using `prost` in a Cargo Project
 
@@ -66,7 +66,6 @@ bundled `protoc` or attempt to compile `protoc` for users. For install
 instructions for `protoc`, please check out the [protobuf install] instructions.
 
 [protobuf install]: https://github.com/protocolbuffers/protobuf#protobuf-compiler-installation
-
 
 ### Packages
 
@@ -111,22 +110,22 @@ corresponding type.
 Scalar value types are converted as follows:
 
 | Protobuf Type | Rust Type |
-| --- | --- |
-| `double` | `f64` |
-| `float` | `f32` |
-| `int32` | `i32` |
-| `int64` | `i64` |
-| `uint32` | `u32` |
-| `uint64` | `u64` |
-| `sint32` | `i32` |
-| `sint64` | `i64` |
-| `fixed32` | `u32` |
-| `fixed64` | `u64` |
-| `sfixed32` | `i32` |
-| `sfixed64` | `i64` |
-| `bool` | `bool` |
-| `string` | `String` |
-| `bytes` | `Vec<u8>` |
+| ------------- | --------- |
+| `double`      | `f64`     |
+| `float`       | `f32`     |
+| `int32`       | `i32`     |
+| `int64`       | `i64`     |
+| `uint32`      | `u32`     |
+| `uint64`      | `u64`     |
+| `sint32`      | `i32`     |
+| `sint64`      | `i64`     |
+| `fixed32`     | `u32`     |
+| `fixed64`     | `u64`     |
+| `sfixed32`    | `i32`     |
+| `sfixed64`    | `i64`     |
+| `bool`        | `bool`    |
+| `string`      | `String`  |
+| `bytes`       | `Vec<u8>` |
 
 #### Enumerations
 
@@ -226,13 +225,13 @@ Protobuf scalar value and enumeration message fields can have a modifier
 depending on the Protobuf version. Modifiers change the corresponding type of
 the Rust field:
 
-| `.proto` Version | Modifier | Rust Type |
-| --- | --- | --- |
-| `proto2` | `optional` | `Option<T>` |
-| `proto2` | `required` | `T` |
-| `proto3` | default | `T` for scalar types, `Option<T>` otherwise |
-| `proto3` | `optional` | `Option<T>` |
-| `proto2`/`proto3` | `repeated` | `Vec<T>` |
+| `.proto` Version  | Modifier   | Rust Type                                   |
+| ----------------- | ---------- | ------------------------------------------- |
+| `proto2`          | `optional` | `Option<T>`                                 |
+| `proto2`          | `required` | `T`                                         |
+| `proto3`          | default    | `T` for scalar types, `Option<T>` otherwise |
+| `proto3`          | `optional` | `Option<T>`                                 |
+| `proto2`/`proto3` | `repeated` | `Vec<T>`                                    |
 
 Note that in `proto3` the default representation for all user-defined message
 types is `Option<T>`, and for scalar types just `T` (during decoding, a missing
@@ -462,7 +461,7 @@ pub enum Gender {
 
 The prost project supports development using Nix flakes. Once you have Nix and flakes enabled, you can simply run:
 
-```
+```bash
 nix develop
 ```
 
@@ -470,21 +469,22 @@ This will drop you into a shell with all dependencies configured to build the en
 
 If you want to use the minimum supported Rust version as required by Tokio [see MSRV](#msrv), run:
 
-```
+```bash
 nix develop .#rust_minimum_version
 ```
 
 This ensures compatibility testing and development with the oldest supported toolchain version.
 
 ## Feature Flags
+
 - `std`: Enable integration with standard library. Disable this feature for `no_std` support. This feature is enabled by default.
 - `derive`: Enable integration with `prost-derive`. Disable this feature to reduce compile times. This feature is enabled by default.
 - `prost-derive`: Deprecated. Alias for `derive` feature.
-- `no-recursion-limit`: Disable the recursion limit. The recursion limit is 100 and cannot be customized. 
+- `no-recursion-limit`: Disable the recursion limit. The recursion limit is 100 and cannot be customized.
 
 ## Contributing
 
-The current maintainer is not contributing new features and doesn't have the time to review new features. Bug fixes and small improvements are welcome. Feel free to contribute small and easily reviewable PRs. 
+The current maintainer is not contributing new features and doesn't have the time to review new features. Bug fixes and small improvements are welcome. Feel free to contribute small and easily reviewable PRs.
 
 Bug fixes are still important, and security fixes will be released as soon as possible. Contact the `#prost` channel in [Tokio discord](https://discord.gg/tokio) if you feel a bug or security fix is not getting enough attention.
 
@@ -497,13 +497,12 @@ The maintainer expects the official `protobuf` project to release their rust lib
    Probably not, however I would like to hear from a Serde expert on the matter.
    There are two complications with trying to serialize Protobuf messages with
    Serde:
-
    - Protobuf fields require a numbered tag, and currently there appears to be no
      mechanism suitable for this in `serde`.
    - The mapping of Protobuf type to Rust type is not 1-to-1. As a result,
      trait-based approaches to dispatching don't work very well. Example: six
      different Protobuf field types correspond to a Rust `Vec<i32>`: `repeated
-     int32`, `repeated sint32`, `repeated sfixed32`, and their packed
+int32`, `repeated sint32`, `repeated sfixed32`, and their packed
      counterparts.
 
    But it is possible to place `serde` derive tags onto the generated types, so
@@ -522,7 +521,7 @@ The maintainer expects the official `protobuf` project to release their rust lib
 3. **Why are most fields are wrapped in an `Option`?**
 
    In the `protobuf` wire protocol all fields are optional. The design of `prost` choose to expose
-   this to the user of the types. `prost` leans toward correctness and safety, aligned with Rust’s 
+   this to the user of the types. `prost` leans toward correctness and safety, aligned with Rust’s
    philosophy — even at the cost of verbosity.
 
 ## License
