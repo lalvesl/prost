@@ -6,7 +6,7 @@
     flake-utils.url = "github:numtide/flake-utils";
     fenix.url = "github:nix-community/fenix";
     rust_manifest = {
-      url = "https://static.rust-lang.org/dist/2023-08-03/channel-rust-1.71.1.toml";
+      url = "https://static.rust-lang.org/dist/2024-10-17/channel-rust-1.82.0.toml";
       flake = false;
     };
   };
@@ -40,7 +40,8 @@
           pkgs.mkShell {
             packages = [
               rustpkgs
-            ] ++ default_pkgs;
+            ]
+            ++ default_pkgs;
           };
         devShells."rust_minimum_version" =
           let
@@ -49,7 +50,8 @@
           pkgs.mkShell {
             packages = [
               rustpkgs
-            ] ++ default_pkgs;
+            ]
+            ++ default_pkgs;
           };
       }
     );
