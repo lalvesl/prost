@@ -32,6 +32,7 @@ jobs:
       - kani
       - no-std
       - check-readme
+      - check-flake
     steps:
       - run: exit 0
 
@@ -236,3 +237,11 @@ jobs:
         run: grep -q "$(sed '/^version = /!d' Cargo.toml | head -n1)" README.md
       - name: Verify that MSRV version is up to date in README
         run: grep -q "supports $(sed -n 's/rust-version = "\(.*\)"/\1/p' Cargo.toml)\." README.md
+
+  check-flake:
+    name: Check flake.nix
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Verify that MSRV version is up to date in flake.nix
+        run: grep -q "channel-rust-$(sed -n 's/rust-version = "\(.*\)"/\1/p' Cargo.toml)\." flake.nix
