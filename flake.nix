@@ -39,7 +39,10 @@
         devShells.default =
           let
             rustpkgs = pkgs.rust-bin.stable.latest.default.override {
-              extensions = [ "rust-src" "rust-analyzer" ];
+              extensions = [
+                "rust-src"
+                "rust-analyzer"
+              ];
             };
           in
           pkgs.mkShell {
@@ -51,7 +54,10 @@
         devShells."rust_minimum_version" =
           let
             rustpkgs = pkgs.rust-bin.stable."${rustVersion}.0".default.override {
-              extensions = [ "rust-src" "rust-analyzer" ];
+              extensions = [
+                "rust-src"
+                "rust-analyzer"
+              ];
             };
           in
           pkgs.mkShell {
