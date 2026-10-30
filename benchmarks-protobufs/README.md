@@ -4,13 +4,13 @@ Compares prost with Google's protobuf implementations, on the datasets of
 `third_party/old_protobuf_benchmarks`:
 
 - `prost`
-- `upb`: Google's official Rust crate ([`protobuf`](https://crates.io/crates/protobuf) 4.x), backed by the upb C library
+- `upb` (C FFI): Google's official Rust crate ([`protobuf`](https://crates.io/crates/protobuf) 4.x), backed by the upb C library
 - `cpp`: Google's C++ library, called through the C API in `cpp/shim.cc`
 - `cpp_arena`: the same, with messages allocated on a reused `Arena`
 
 Each dataset has one criterion group per operation:
 
-| Group         | prost                  | upb                 | C++                                              |
+| Group         | prost                  | upb (C FFI)         | C++                                              |
 | ------------- | ---------------------- | ------------------- | ------------------------------------------------ |
 | `decode`      | `Message::decode`      | `Parse::parse`      | `ParseFromArray` on a new message                |
 | `merge`       | `clear` + `merge`      | -                   | `ParseFromArray` on a reused message             |
