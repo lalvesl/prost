@@ -1,4 +1,4 @@
-# `benchmarks-google`
+# `benchmarks-protobufs`
 
 Compares prost with Google's protobuf implementations, on the datasets of
 `third_party/old_protobuf_benchmarks`:
@@ -26,7 +26,7 @@ is paid once per iteration.
 ## Running
 
 ```sh
-cargo bench --manifest-path benchmarks-google/Cargo.toml
+cargo bench --manifest-path benchmarks-protobufs/Cargo.toml
 ```
 
 This crate is not part of the prost workspace, and is not built by CI.

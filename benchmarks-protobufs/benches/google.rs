@@ -1,6 +1,6 @@
 use std::hint::black_box;
 
-use benchmarks_google::{cpp, load_dataset, prost_benchmarks, upb};
+use benchmarks_protobufs::{cpp, load_dataset, prost_benchmarks, upb};
 use criterion::{criterion_group, criterion_main, Criterion, Throughput};
 
 /// Benchmarks every operation of one dataset, with one function per
@@ -120,7 +120,7 @@ macro_rules! dataset {
             benchmark_dataset::<$prost, $upb>(
                 criterion,
                 stringify!($name),
-                benchmarks_google::dataset::$name(),
+                benchmarks_protobufs::dataset::$name(),
                 $kind,
             );
         }
