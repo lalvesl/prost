@@ -1,0 +1,222 @@
+warning: Git tree '/home/lalvesl/super_balas/source_codes/prost' is dirty
+evaluation warning: stdenv.isLinux is deprecated, use stdenv.hostPlatform.isLinux instead
+    Finished `bench` profile [optimized + debuginfo] target(s) in 54.72s
+     Running benches/google.rs (benchmarks-google/target/release/deps/google-de85834e8089cb37)
+google_message1_proto2/decode/prost
+                        time:   [508.37 ns 512.98 ns 518.59 ns]
+                        thrpt:  [419.29 MiB/s 423.87 MiB/s 427.72 MiB/s]
+Found 6 outliers among 100 measurements (6.00%)
+  2 (2.00%) high mild
+  4 (4.00%) high severe
+google_message1_proto2/decode/upb
+                        time:   [973.89 ns 979.85 ns 986.13 ns]
+                        thrpt:  [220.50 MiB/s 221.91 MiB/s 223.27 MiB/s]
+Found 4 outliers among 100 measurements (4.00%)
+  1 (1.00%) high mild
+  3 (3.00%) high severe
+google_message1_proto2/decode/cpp
+                        time:   [539.24 ns 543.43 ns 548.37 ns]
+                        thrpt:  [396.52 MiB/s 400.12 MiB/s 403.23 MiB/s]
+Found 9 outliers among 100 measurements (9.00%)
+  3 (3.00%) high mild
+  6 (6.00%) high severe
+google_message1_proto2/decode/cpp_arena
+                        time:   [601.65 ns 607.28 ns 613.16 ns]
+                        thrpt:  [354.62 MiB/s 358.05 MiB/s 361.40 MiB/s]
+Found 5 outliers among 100 measurements (5.00%)
+  3 (3.00%) high mild
+  2 (2.00%) high severe
+
+google_message1_proto2/merge/prost
+                        time:   [473.06 ns 474.56 ns 476.22 ns]
+                        thrpt:  [456.60 MiB/s 458.19 MiB/s 459.64 MiB/s]
+Found 10 outliers among 100 measurements (10.00%)
+  6 (6.00%) high mild
+  4 (4.00%) high severe
+google_message1_proto2/merge/cpp
+                        time:   [311.96 ns 313.45 ns 315.17 ns]
+                        thrpt:  [689.91 MiB/s 693.69 MiB/s 697.00 MiB/s]
+Found 18 outliers among 100 measurements (18.00%)
+  9 (9.00%) high mild
+  9 (9.00%) high severe
+
+google_message1_proto2/encode/prost
+                        time:   [267.76 ns 268.68 ns 269.61 ns]
+                        thrpt:  [806.50 MiB/s 809.28 MiB/s 812.06 MiB/s]
+Found 5 outliers among 100 measurements (5.00%)
+  1 (1.00%) high mild
+  4 (4.00%) high severe
+google_message1_proto2/encode/upb
+                        time:   [539.35 ns 544.07 ns 549.86 ns]
+                        thrpt:  [395.44 MiB/s 399.65 MiB/s 403.15 MiB/s]
+Found 10 outliers among 100 measurements (10.00%)
+  5 (5.00%) high mild
+  5 (5.00%) high severe
+google_message1_proto2/encode/cpp
+                        time:   [154.79 ns 156.16 ns 158.24 ns]
+                        thrpt:  [1.3419 GiB/s 1.3598 GiB/s 1.3718 GiB/s]
+Found 6 outliers among 100 measurements (6.00%)
+  2 (2.00%) high mild
+  4 (4.00%) high severe
+
+google_message1_proto2/encoded_len/prost
+                        time:   [51.001 ns 51.176 ns 51.366 ns]
+Found 13 outliers among 100 measurements (13.00%)
+  10 (10.00%) high mild
+  3 (3.00%) high severe
+google_message1_proto2/encoded_len/upb
+                        time:   [513.91 ns 518.51 ns 523.38 ns]
+Found 17 outliers among 100 measurements (17.00%)
+  12 (12.00%) high mild
+  5 (5.00%) high severe
+google_message1_proto2/encoded_len/cpp
+                        time:   [53.520 ns 53.848 ns 54.207 ns]
+Found 12 outliers among 100 measurements (12.00%)
+  6 (6.00%) high mild
+  6 (6.00%) high severe
+
+google_message1_proto3/decode/prost
+                        time:   [531.55 ns 590.41 ns 657.44 ns]
+                        thrpt:  [330.73 MiB/s 368.28 MiB/s 409.06 MiB/s]
+Found 12 outliers among 100 measurements (12.00%)
+  1 (1.00%) high mild
+  11 (11.00%) high severe
+google_message1_proto3/decode/upb
+                        time:   [1.0634 µs 1.0678 µs 1.0726 µs]
+                        thrpt:  [202.72 MiB/s 203.64 MiB/s 204.48 MiB/s]
+Found 8 outliers among 100 measurements (8.00%)
+  7 (7.00%) high mild
+  1 (1.00%) high severe
+google_message1_proto3/decode/cpp
+                        time:   [617.07 ns 624.94 ns 634.90 ns]
+                        thrpt:  [342.47 MiB/s 347.93 MiB/s 352.37 MiB/s]
+Found 9 outliers among 100 measurements (9.00%)
+  6 (6.00%) high mild
+  3 (3.00%) high severe
+google_message1_proto3/decode/cpp_arena
+                        time:   [660.30 ns 664.13 ns 668.24 ns]
+                        thrpt:  [325.39 MiB/s 327.40 MiB/s 329.30 MiB/s]
+Found 15 outliers among 100 measurements (15.00%)
+  3 (3.00%) low mild
+  5 (5.00%) high mild
+  7 (7.00%) high severe
+
+google_message1_proto3/merge/prost
+                        time:   [377.48 ns 379.53 ns 381.77 ns]
+                        thrpt:  [569.56 MiB/s 572.91 MiB/s 576.02 MiB/s]
+Found 9 outliers among 100 measurements (9.00%)
+  4 (4.00%) high mild
+  5 (5.00%) high severe
+google_message1_proto3/merge/cpp
+                        time:   [379.63 ns 386.12 ns 397.49 ns]
+                        thrpt:  [547.03 MiB/s 563.13 MiB/s 572.77 MiB/s]
+Found 4 outliers among 100 measurements (4.00%)
+  2 (2.00%) high mild
+  2 (2.00%) high severe
+
+google_message1_proto3/encode/prost
+                        time:   [240.26 ns 245.56 ns 255.39 ns]
+                        thrpt:  [825.25 MiB/s 858.28 MiB/s 877.24 MiB/s]
+Found 7 outliers among 100 measurements (7.00%)
+  2 (2.00%) high mild
+  5 (5.00%) high severe
+google_message1_proto3/encode/upb
+                        time:   [589.14 ns 592.32 ns 595.68 ns]
+                        thrpt:  [353.82 MiB/s 355.82 MiB/s 357.74 MiB/s]
+Found 10 outliers among 100 measurements (10.00%)
+  10 (10.00%) high mild
+google_message1_proto3/encode/cpp
+                        time:   [228.94 ns 230.33 ns 231.84 ns]
+                        thrpt:  [909.10 MiB/s 915.06 MiB/s 920.60 MiB/s]
+Found 9 outliers among 100 measurements (9.00%)
+  5 (5.00%) high mild
+  4 (4.00%) high severe
+
+google_message1_proto3/encoded_len/prost
+                        time:   [46.397 ns 46.581 ns 46.789 ns]
+Found 6 outliers among 100 measurements (6.00%)
+  1 (1.00%) high mild
+  5 (5.00%) high severe
+google_message1_proto3/encoded_len/upb
+                        time:   [570.67 ns 582.77 ns 605.81 ns]
+Found 7 outliers among 100 measurements (7.00%)
+  5 (5.00%) high mild
+  2 (2.00%) high severe
+google_message1_proto3/encoded_len/cpp
+                        time:   [49.992 ns 50.206 ns 50.464 ns]
+Found 12 outliers among 100 measurements (12.00%)
+  1 (1.00%) low mild
+  3 (3.00%) high mild
+  8 (8.00%) high severe
+
+google_message2/decode/prost
+                        time:   [281.47 µs 283.91 µs 287.05 µs]
+                        thrpt:  [280.97 MiB/s 284.08 MiB/s 286.54 MiB/s]
+Found 10 outliers among 100 measurements (10.00%)
+  6 (6.00%) high mild
+  4 (4.00%) high severe
+google_message2/decode/upb
+                        time:   [373.54 µs 374.82 µs 376.30 µs]
+                        thrpt:  [214.33 MiB/s 215.18 MiB/s 215.92 MiB/s]
+Found 13 outliers among 100 measurements (13.00%)
+  7 (7.00%) high mild
+  6 (6.00%) high severe
+google_message2/decode/cpp
+                        time:   [383.63 µs 386.63 µs 389.79 µs]
+                        thrpt:  [206.91 MiB/s 208.60 MiB/s 210.23 MiB/s]
+Found 6 outliers among 100 measurements (6.00%)
+  6 (6.00%) high mild
+google_message2/decode/cpp_arena
+                        time:   [226.70 µs 228.23 µs 229.92 µs]
+                        thrpt:  [350.79 MiB/s 353.38 MiB/s 355.77 MiB/s]
+Found 5 outliers among 100 measurements (5.00%)
+  4 (4.00%) high mild
+  1 (1.00%) high severe
+
+google_message2/merge/prost
+                        time:   [277.69 µs 278.71 µs 279.82 µs]
+                        thrpt:  [288.23 MiB/s 289.37 MiB/s 290.44 MiB/s]
+Found 5 outliers among 100 measurements (5.00%)
+  3 (3.00%) high mild
+  2 (2.00%) high severe
+google_message2/merge/cpp
+                        time:   [119.24 µs 119.72 µs 120.25 µs]
+                        thrpt:  [670.69 MiB/s 673.65 MiB/s 676.40 MiB/s]
+Found 5 outliers among 100 measurements (5.00%)
+  5 (5.00%) high mild
+
+google_message2/encode/prost
+                        time:   [147.70 µs 148.80 µs 150.13 µs]
+                        thrpt:  [537.23 MiB/s 542.02 MiB/s 546.05 MiB/s]
+Found 9 outliers among 100 measurements (9.00%)
+  3 (3.00%) high mild
+  6 (6.00%) high severe
+google_message2/encode/upb
+                        time:   [212.47 µs 214.08 µs 215.81 µs]
+                        thrpt:  [373.72 MiB/s 376.74 MiB/s 379.60 MiB/s]
+Found 10 outliers among 100 measurements (10.00%)
+  5 (5.00%) high mild
+  5 (5.00%) high severe
+google_message2/encode/cpp
+                        time:   [101.81 µs 103.09 µs 104.82 µs]
+                        thrpt:  [769.44 MiB/s 782.38 MiB/s 792.16 MiB/s]
+Found 3 outliers among 100 measurements (3.00%)
+  1 (1.00%) high mild
+  2 (2.00%) high severe
+
+google_message2/encoded_len/prost
+                        time:   [19.093 µs 19.144 µs 19.199 µs]
+Found 7 outliers among 100 measurements (7.00%)
+  4 (4.00%) high mild
+  3 (3.00%) high severe
+google_message2/encoded_len/upb
+                        time:   [206.47 µs 207.52 µs 208.63 µs]
+Found 7 outliers among 100 measurements (7.00%)
+  5 (5.00%) high mild
+  2 (2.00%) high severe
+google_message2/encoded_len/cpp
+                        time:   [29.273 µs 29.825 µs 30.722 µs]
+Found 22 outliers among 100 measurements (22.00%)
+  3 (3.00%) high mild
+  19 (19.00%) high severe
+
